@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="100"
+    tools:context="com.example.apitest.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_add"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_weight="20">
+
+        <EditText
+            android:id="@+id/et_snippet_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Type here"
+            android:layout_weight="60"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btn_snippet_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_weight="20" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_get"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_weight="20">
+
+        <EditText
+            android:id="@+id/et_snippet_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Type here"
+            android:layout_weight="60"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btn_snippet_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Get"
+            android:layout_weight="20" />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <!-- Output box at bottom -->
+
+    <TextView
+        android:id="@+id/tv_snippet_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:hint="Api Output"/>
+
+</LinearLayout>
