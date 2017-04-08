@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:id="@+id/ll_add"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="100"
@@ -27,7 +27,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
+            android:layout_weight="20"
             android:visibility="visible"/>
 
         <Button
@@ -42,7 +42,7 @@
 
     <LinearLayout
         android:id="@+id/ll_get"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="100"
@@ -58,7 +58,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
+            android:layout_weight="20"
             android:visibility="visible"/>
 
         <Button

@@ -17,9 +17,9 @@ import retrofit2.http.Path;
 import retrofit2.Call;
 
 public interface DjangoApi {
-    String BASE_URL = "ip/";
+    String BASE_URL = "http://192.168.0.19:8000/";
 
     @GET("snippets/")
-    Call<List<Snippet>> groupList(@Path("id") int groupId);
+    Call<List<Snippet>> getSnippets();
 
 }
