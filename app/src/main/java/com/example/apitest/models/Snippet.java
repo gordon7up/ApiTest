@@ -12,6 +12,7 @@ public class Snippet {
     private String lineos;
     private String language;
     private String style;
+    private String owner;
 
     public String getCreated() {
         return created;
@@ -59,5 +60,13 @@ public class Snippet {
 
     public void setStyle(String style) {
         this.style = style;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }

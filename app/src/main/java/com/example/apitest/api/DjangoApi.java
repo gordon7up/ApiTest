@@ -9,6 +9,7 @@ import com.example.apitest.models.Snippet;
 import java.util.List;
 
 import okhttp3.ResponseBody;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -21,5 +22,9 @@ public interface DjangoApi {
 
     @GET("snippets/")
     Call<List<Snippet>> getSnippets();
+
+    @FormUrlEncoded
+    @POST("snippets/")
+    Call<ResponseBody> addCodeSnippet(@Field("code") String snippet);
 
 }
