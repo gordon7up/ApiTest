@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button getBtn;
     Button addBtn;
+    LinearLayout refreshBtn;
     EditText addSnippet;
     EditText getStuff;
     TextView output;
@@ -62,9 +64,19 @@ public class MainActivity extends AppCompatActivity {
     private void setupLayout(){
         getBtn = (Button)findViewById(R.id.btn_snippet_get);
         addBtn = (Button)findViewById(R.id.btn_snippet_add);
+        refreshBtn = (LinearLayout)findViewById(R.id.ll_btn_refresh);
         addSnippet = (EditText)findViewById(R.id.et_snippet_add);
         getStuff = (EditText)findViewById(R.id.et_snippet_get);
         output = (TextView)findViewById(R.id.tv_snippet_output);
+
+        refreshBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                output.setText("");
+                api.getSnippets().enqueue(snippetsCallback);
+                postSnippetSetup();
+            }
+        });
     }
 
     /**
